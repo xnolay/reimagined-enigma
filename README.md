@@ -1,1 +1,1 @@
-ubah tambah tabel 
+ubah tambah tabel belanja 
