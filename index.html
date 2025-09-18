@@ -66,10 +66,11 @@
                 <textarea id="pesan" name="pesan" rows="4" class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500" placeholder="Contoh: Mohon dikirim ke alamat..."></textarea>
             </div>
 
-            <!-- NPWP Upload -->
-            <div class="mt-6">
-                <label for="npwp" class="block text-sm font-medium text-gray-300 mb-2">Upload NPWP (Opsional untuk Pelanggan Baru)</label>
-                <input type="file" id="npwp" name="npwp" class="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-50 file:text-cyan-700 hover:file:bg-cyan-100 cursor-pointer">
+            <!-- NPWP Information -->
+            <div class="mt-6 p-4 bg-gray-700/60 rounded-lg">
+                <p class="text-sm text-cyan-300">
+                    <span class="font-bold">Untuk Pelanggan Baru:</span> Setelah mengirim form ini, mohon lampirkan file NPWP Anda via chat WhatsApp.
+                </p>
             </div>
 
             <!-- Submit Button -->
@@ -223,11 +224,6 @@
             const email = document.getElementById('email').value;
             const telepon = document.getElementById('telepon').value;
             const pesan = document.getElementById('pesan').value;
-            const npwpInput = document.getElementById('npwp');
-            
-            const npwpStatus = npwpInput.files.length > 0 
-                ? `[File NPWP: ${npwpInput.files[0].name} - akan dikirim via chat]` 
-                : 'Tidak dilampirkan';
             
             let orderDetails = '';
             document.querySelectorAll('.order-item').forEach((item, index) => {
@@ -268,7 +264,6 @@ Nama: ${nama}
 Perusahaan: ${perusahaan}
 Email: ${email}
 Telepon: ${telepon}
-Lampiran NPWP: ${npwpStatus}
 -----------------------------------
 *Detail Pesanan:*${orderDetails}
 -----------------------------------
