@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eHose - Kabel Fiber Optik Fleksibel & Aman</title>
+    <title>Formulir Pemesanan eHose</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,202 +12,71 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Hero background image */
-        .hero-section {
-            background: linear-gradient(rgba(0, 20, 50, 0.8), rgba(0, 20, 50, 0.8)), url('https://images.unsplash.com/photo-1587135304387-a45b7367612f?q=80&w=1920&auto=format&fit=crop') no-repeat center center;
-            background-size: cover;
-        }
-        /* Button hover effect */
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        /* Simple fade-in animation on scroll */
-        .scroll-animate {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            will-change: opacity, transform;
-        }
-        .scroll-animate.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 py-12 px-4">
 
-    <!-- Navigation Bar -->
-    <nav class="bg-gray-900/80 backdrop-blur-sm fixed w-full z-20 top-0 start-0 border-b border-gray-700">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <span class="self-center text-2xl font-bold whitespace-nowrap text-white">eHose</span>
-            </a>
-            <!-- Mobile menu button -->
-            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
-            </button>
-            <!-- Menu items -->
-            <div class="hidden w-full md:block md:w-auto" id="navbar-sticky">
-                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800/80 md:bg-transparent">
-                    <li><a href="#features" class="block py-2 px-3 text-gray-300 hover:text-white rounded md:bg-transparent md:p-0">Fitur</a></li>
-                    <li><a href="#contact" class="block py-2 px-3 text-white bg-cyan-600 rounded md:bg-cyan-500 md:hover:bg-cyan-600 md:px-4">Form Order</a></li>
-                </ul>
-            </div>
+    <!-- Form Order -->
+    <section id="contact" class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-16 rounded-2xl shadow-2xl max-w-2xl mx-auto">
+        <div class="text-center text-white mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-2">Formulir Pemesanan eHose</h2>
+            <p class="text-lg text-gray-300">Pilih produk yang Anda inginkan dan isi data diri untuk melakukan pemesanan.</p>
         </div>
-    </nav>
-
-    <!-- Header / Hero Section -->
-    <header class="hero-section text-white pt-24">
-        <div class="container mx-auto px-6 py-20 md:py-32 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 scroll-animate">Revolusi Kabel Fiber Telah Tiba</h1>
-            <p class="text-lg md:text-2xl font-light mb-8 max-w-3xl mx-auto scroll-animate" style="transition-delay: 150ms;">
-                Selamat Tinggal Kabel Kaku dan Rentan. Sambut <span class="font-bold text-cyan-300">eHose</span>, Kabel Fleksibel Berpelindung Metal yang Aman dan Tahan Lama.
-            </p>
-            <a href="#contact" class="cta-button bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-lg inline-flex items-center justify-center scroll-animate" style="transition-delay: 300ms;">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.908 6.166l.004.008-1.161 4.224 4.272-1.119z"/></svg>
-                Pesan Sekarang
-            </a>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-16 md:py-24">
-
-        <!-- Mengapa eHose? -->
-        <section id="features" class="text-center mb-20 md:mb-32">
-            <div class="scroll-animate">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mengapa Harus Beralih ke eHose?</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">eHose dirancang untuk mengatasi semua masalah kabel konvensional. Solusi cerdas untuk instalasi yang lebih cepat, aman, dan efisien.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 scroll-animate">
-                    <div class="flex items-center justify-center h-16 w-16 bg-cyan-100 text-cyan-600 rounded-full mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Perlindungan Maksimal</h3>
-                    <p class="text-gray-600">Dilengkapi selang metal spiral, eHose <span class="font-semibold">anti gigitan tikus</span>, tahan benturan, dan tidak mudah terkelupas. Aset Anda aman terlindungi.</p>
+        <form id="contact-form" class="mx-auto">
+            <!-- Customer Data -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="nama" class="block text-sm font-medium text-gray-300 mb-2">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 scroll-animate" style="transition-delay: 150ms;">
-                    <div class="flex items-center justify-center h-16 w-16 bg-cyan-100 text-cyan-600 rounded-full mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Instalasi Super Cepat</h3>
-                    <p class="text-gray-600">Ucapkan selamat tinggal pada pipa conduit! eHose sangat <span class="font-semibold">fleksibel dan mudah ditekuk</span>, mempercepat instalasi hingga 50%.</p>
+                <div>
+                    <label for="perusahaan" class="block text-sm font-medium text-gray-300 mb-2">Nama Perusahaan</label>
+                    <input type="text" id="perusahaan" name="perusahaan" class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 scroll-animate" style="transition-delay: 300ms;">
-                    <div class="flex items-center justify-center h-16 w-16 bg-cyan-100 text-cyan-600 rounded-full mx-auto mb-6">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Hemat Biaya & Efisien</h3>
-                    <p class="text-gray-600">Satu produk untuk semua. Tidak perlu lagi membeli kabel dan pipa pelindung terpisah. <span class="font-semibold">Lebih praktis, hemat</span>, dan rapi.</p>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Alamat Email</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
+                </div>
+                <div>
+                    <label for="telepon" class="block text-sm font-medium text-gray-300 mb-2">Nomor Telepon</label>
+                    <input type="tel" id="telepon" name="telepon" required class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
                 </div>
             </div>
-        </section>
 
-        <!-- Form Order -->
-        <section id="contact" class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-16 rounded-2xl shadow-2xl scroll-animate">
-            <div class="text-center text-white mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-2">Formulir Pemesanan eHose</h2>
-                <p class="text-lg text-gray-300">Pilih produk yang Anda inginkan dan isi data diri untuk melakukan pemesanan.</p>
+            <!-- Order Section -->
+            <div class="md:col-span-2 bg-gray-700/50 p-6 rounded-lg mt-6">
+                <div class="flex justify-between items-center mb-4">
+                     <label class="block text-sm font-medium text-gray-300">Pilih Produk</label>
+                     <label class="block text-sm font-medium text-gray-300 pr-2">Jumlah</label>
+                </div>
+                <div id="order-items-container" class="space-y-3">
+                    <!-- Items will be generated by JS -->
+                </div>
+
+                <!-- Total Display -->
+                <div class="mt-6 text-right border-t border-gray-600 pt-4">
+                    <p class="text-lg text-gray-300">Total Belanja:</p>
+                    <p id="total-price" class="text-3xl font-bold text-cyan-400">Rp 0</p>
+                </div>
             </div>
-            <form id="contact-form" class="max-w-2xl mx-auto">
-                <!-- Customer Data -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label for="nama" class="block text-sm font-medium text-gray-300 mb-2">Nama Lengkap</label>
-                        <input type="text" id="nama" name="nama" required class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
-                    </div>
-                    <div>
-                        <label for="perusahaan" class="block text-sm font-medium text-gray-300 mb-2">Nama Perusahaan</label>
-                        <input type="text" id="perusahaan" name="perusahaan" class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Alamat Email</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
-                    </div>
-                    <div>
-                        <label for="telepon" class="block text-sm font-medium text-gray-300 mb-2">Nomor Telepon</label>
-                        <input type="tel" id="telepon" name="telepon" required class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
-                    </div>
-                </div>
+            
+            <!-- Additional Message -->
+            <div class="mt-6">
+                <label for="pesan" class="block text-sm font-medium text-gray-300 mb-2">Pesan / Keterangan Tambahan</label>
+                <textarea id="pesan" name="pesan" rows="4" class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500" placeholder="Contoh: Mohon dikirim ke alamat..."></textarea>
+            </div>
 
-                <!-- Order Section -->
-                <div class="md:col-span-2 bg-gray-700/50 p-6 rounded-lg mt-6">
-                    <div class="flex justify-between items-center mb-4">
-                         <label class="block text-sm font-medium text-gray-300">Pilih Produk</label>
-                         <label class="block text-sm font-medium text-gray-300 pr-2">Jumlah</label>
-                    </div>
-                    <div id="order-items-container" class="space-y-3">
-                        <!-- Items will be generated by JS -->
-                    </div>
-
-                    <!-- Total Display -->
-                    <div class="mt-6 text-right border-t border-gray-600 pt-4">
-                        <p class="text-lg text-gray-300">Total Belanja:</p>
-                        <p id="total-price" class="text-3xl font-bold text-cyan-400">Rp 0</p>
-                    </div>
-                </div>
-                
-                <!-- Additional Message -->
-                <div class="mt-6">
-                    <label for="pesan" class="block text-sm font-medium text-gray-300 mb-2">Pesan / Keterangan Tambahan</label>
-                    <textarea id="pesan" name="pesan" rows="4" class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-cyan-500 focus:border-cyan-500" placeholder="Contoh: Mohon dikirim ke alamat..."></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="text-center mt-8">
-                    <button type="submit" class="cta-button bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-12 rounded-full text-lg w-full md:w-auto">
-                        Pesan Sekarang via WhatsApp
-                    </button>
-                    <p id="form-message" class="mt-4 h-5"></p>
-                </div>
-            </form>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2025 XNOLAY. Semua Hak Cipta Dilindungi.</p>
-            <p class="text-sm text-gray-400 mt-1">Solusi Kabel Fiber Optik Inovatif</p>
-        </div>
-    </footer>
+            <!-- Submit Button -->
+            <div class="text-center mt-8">
+                <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-12 rounded-full text-lg w-full md:w-auto transition-transform transform hover:scale-105">
+                    Pesan Sekarang via WhatsApp
+                </button>
+                <p id="form-message" class="mt-4 h-5"></p>
+            </div>
+        </form>
+    </section>
 
     <script>
-        // JavaScript for mobile menu toggle
-        const menuButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
-        const navbar = document.getElementById('navbar-sticky');
-        if (menuButton && navbar) {
-            menuButton.addEventListener('click', () => {
-                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-                menuButton.setAttribute('aria-expanded', !isExpanded);
-                navbar.classList.toggle('hidden');
-            });
-        }
-
-
-        // JavaScript for scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        const elementsToAnimate = document.querySelectorAll('.scroll-animate');
-        elementsToAnimate.forEach(el => observer.observe(el));
-
         // ----- Order Form Logic -----
         const orderItemsContainer = document.getElementById('order-items-container');
         const totalPriceDisplay = document.getElementById('total-price');
@@ -233,7 +102,6 @@
             <option value="FTTH Drop 4 Core Premium 2KM" data-price="1926000">FTTH Drop 4 Core Premium 2KM - Rp 1.926.000</option>
             <option value="FTTH Drop 2 Core Premium 2KM" data-price="1391000">FTTH Drop 2 Core Premium 2KM - Rp 1.391.000</option>
             <option value="FTTH Drop 1 Core Premium 1KM" data-price="685000">FTTH Drop 1 Core Premium 1KM - Rp 685.000</option>
-	    <option value="FTTH Drop 1 Core 1KM" data-price="561000">FTTH Drop 1 Core 1KM - Rp 561.000</option>	
         `;
 
         // Generate 8 order item rows
@@ -253,7 +121,6 @@
             orderItemsContainer.appendChild(orderItem);
         }
         
-        // Function to format numbers as Indonesian Rupiah
         function formatRupiah(number) {
             return new Intl.NumberFormat('id-ID', {
                 style: 'currency',
@@ -262,7 +129,6 @@
             }).format(number);
         }
 
-        // Function to calculate the grand total
         function calculateTotal() {
             let grandTotal = 0;
             document.querySelectorAll('.order-item').forEach(item => {
@@ -278,16 +144,13 @@
             totalPriceDisplay.textContent = formatRupiah(grandTotal);
         }
 
-        // Add event listeners to all select and input fields
         document.querySelectorAll('.product-select, .qty-input').forEach(element => {
             element.addEventListener('change', calculateTotal);
             element.addEventListener('input', calculateTotal);
         });
 
-        // Initial calculation on page load
         calculateTotal();
 
-        // ----- Form Submission Logic -----
         const contactForm = document.getElementById('contact-form');
 
         contactForm.addEventListener('submit', function(e) {
@@ -300,7 +163,6 @@
             const pesan = document.getElementById('pesan').value;
             
             let orderDetails = '';
-            // Loop through each order item row to build the detailed message
             document.querySelectorAll('.order-item').forEach((item, index) => {
                 const productSelect = item.querySelector('.product-select');
                 const qtyInput = item.querySelector('.qty-input');
@@ -364,4 +226,3 @@ ${pesan || '-'}`;
     </script>
 </body>
 </html>
-
