@@ -77,33 +77,90 @@
     </section>
 
     <script>
-        // ----- Order Form Logic -----
+        // ----- PUSAT DATA PRODUK -----
+        // Untuk mengubah atau menambah produk, cukup edit daftar di bawah ini.
+        const products = [
+            { name: "ADSS 288 Core (24 Tube) 4KM", price: 150000000 },
+	    { name: "FIBER OPTIC CABLE ADSS  288 CORE  ( 24 TUBE ) 4 KM", price: 150000000 },
+	    { name: "FIBER OPTIC CABLE ADSS  144 CORE  ( 12 TUBE ) 4 KM", price: 75000000 },
+	    { name: "FIBER OPTIC CABLE ADSS   96 CORE   ( 8 TUBE ) 4 KM", price: 49900000 },
+	    { name: "FIBER OPTIC CABLE ADSS   48 CORE   ( 4 TUBE ) 4 KM", price: 29990000 },
+	    { name: "FIBER OPTIC CABLE ADSS   24 CORE   ( 4 TUBE ) 4 KM", price: 20999000 },
+	    { name: "FIBER OPTIC CABLE MINI ADSS- 24 CORE 4 KM", price: 15980000 },
+	    { name: "FIBER OPTIC CABLE MINI ADSS- 24 CORE 2 KM", price: 7900000 },
+	    { name: "FIBER OPTIC CABLE MINI ADSS- 12 CORE 4 KM", price: 11702500 },
+	    { name: "FIBER OPTIC CABLE MINI ADSS- 12 CORE 3 KM", price: 8827500 },
+	    { name: "FIBER OPTIC CABLE MINI ADSS- 12 CORE 2 KM", price: 5500000 },
+	    { name: "FIBER OPTIC CABLE MINI ADSS-   8 CORE 2 KM", price: 5065000 },
+	    { name: "FIBER OPTIC CABLE MINI ADSS-   6 CORE 2 KM", price: 4815000 },
+	    { name: "FIBER OPTIC CABLE MINI ADSS-   4 CORE 2 KM", price: 4500000 },
+	    { name: "FIBER OPTIC CABLE ARMOURED GYXTW  12 CORE 2 KM", price: 5990000 },
+	    { name: "FIBER OPTIC CABLE ARMOURED GYXTW    4 CORE 2 KM", price: 2990000 },
+	    { name: "FIBER OPTIC CABLE FIG8  ARMOUR 12 CORE 2 KM", price: 5990000 },
+	    { name: "FIBER OPTIC CABLE FIG8  ARMOUR 8 CORE 2 KM", price: 5700000 },
+	    { name: "FIBER OPTIC CABLE FIG8  ARMOUR 6 CORE 2 KM", price: 5500000 },
+	    { name: "FIBER OPTIC CABLE MINI FIG8 GYXTC8Y-12 CORE 2 KM", price: 4314240 },
+	    { name: "FIBER OPTIC CABLE MINI FIG8 GYXTC8Y-12 CORE 1KM", price: 2207120 },
+	    { name: "FIBER OPTIC CABLE MINI FIG8 GYXTC8Y-8 CORE 2 KM", price: 3640250 },
+	    { name: "FIBER OPTIC CABLE MINI FIG8 GYXTC8Y-6 CORE 2 KM", price: 3290250 },
+	    { name: "FIBER OPTIC CABLE MINI FIG8 GYXTC8Y-6 CORE 1KM", price: 1765500 },
+	    { name: "FIBER OPTIC CABLE MINI FIG8 GYXTC8Y-4 CORE 2 KM", price: 2985300 },
+	    { name: "FIBER OPTIC CABLE MINI FIG8 GYXTC8Y-4 CORE 1KM", price: 1524750 },
+	    { name: "FIBER OPTIC CABLE 12 CORE JELLY TUBE GJYXTCH 4 KM", price: 7490000 },
+	    { name: "FIBER OPTIC CABLE 12 CORE JELLY TUBE GJYXTCH 2 KM", price: 3745000 },
+	    { name: "FIBER OPTIC CABLE 12 CORE JELLY TUBE GJYXTCH 1KM", price: 1872500 },
+	    { name: "FIBER OPTIC CABLE 8 CORE JELLY TUBE GJYXTCH 2 KM", price: 3477500 },
+	    { name: "FIBER OPTIC CABLE 8 CORE JELLY TUBE GJYXTCH 1KM", price: 1738750 },
+	    { name: "FIBER OPTIC CABLE 6 CORE JELLY TUBE GJYXTCH 2 KM", price: 3103000 },
+	    { name: "FIBER OPTIC CABLE 6 CORE JELLY TUBE GJYXTCH 1KM", price: 1605000 },
+	    { name: "FIBER OPTIC CABLE 4 CORE JELLY TUBE GJYXTCH 2 KM", price: 2782000 },
+	    { name: "FIBER OPTIC CABLE 4 CORE JELLY TUBE GJYXTCH 1KM", price: 1444500 },
+	    { name: "FIBER OPTIC CABLE 2 CORE JELLY TUBE GJYXTCH 2 KM", price: 2484000 },
+	    { name: "FIBER OPTIC CABLE 2 CORE JELLY TUBE GJYXTCH 1KM", price: 1242000 },
+	    { name: "FTTH DROP *4 CORE PREMIUM * 3 steel wire 1.20mm 2 KM", price: 1926000 },
+	    { name: "FTTH DROP *4 CORE PREMIUM * 3 steel wire 1.20mm 1KM", price: 963000 },
+	    { name: "FTTH DROP *4 CORE * 3 steel wire 1.0mm 1KM", price: 88275 },
+	    { name: "FTTH DROP *2 CORE PREMIUM * 3 steel wire 1.20mm 2 KM", price: 1391000 },
+	    { name: "FTTH DROP *2 CORE * 3 steel wire1.0mm 1KM", price: 695500 },
+	    { name: "FTTH DROP *1 CORE PREMIUM * 3 steel wire1.20mm 1KM", price: 685000 },
+	    { name: "FTTH DROP *1 CORE * 3 steel wire1.0mm 1KM", price: 56135 },
+	    { name: "FTTH DROP *1 CORE GEPENG *2*0.4 steel wire, Black Carton, Fiberhome 500M", price: 299000 },
+	    { name: "HORIZONTAL FIBER OPTIC JOINT CLOSURE 12 CORES ", price: 135000 },
+	    { name: "HORIZONTAL FIBER OPTIC JOINT CLOSURE 24 CORES ", price: 145000 },
+	    { name: "Mini PLC splitter 1*16 SC/UPC ", price: 93000 },
+	    { name: "Mini PLC splitter 1*8 SC/UPC ", price: 49000 },
+	    { name: "Mini PLC splitter 1*4 SC/UPC ", price: 39000 },
+	    { name: "OPTIC DISTRIBUTION BOX   8 CORES with 1*8 cassette PLC splitter ", price: 125000 },
+	    { name: "OPTIC DISTRIBUTION BOX 16 CORES with 1*16 cassette PLC splitter ", price: 225000 },
+	    { name: "OPTIC DISTRIBUTION BOX 32 CORES with 1*16 cassette PLC splitter ", price: 270000 },
+	    { name: "OPTICAL DISTRIBUTION FRAME (ODF) 48 CORES, Drawer-Type, 2Ublack, Simplex, SC/UPC ", price: 799000 },
+	    { name: "OPTICAL DISRIBUTION FRAME (ODF) 96 CORES, Drawer-Type, 4Ublack, Simplex, SC/UPC ", price: 1275000 },
+	    { name: "OPTIC DISTRIBUTION POINT 16 CORES Grey ABS, with 9pcs adapter, 1:16 SC/UPC PLC slplitter ", price: 399000 },
+	    { name: "OPTIC DISTRIBUTION POINT 8 CORES Grey ABS, with 9pcs adapter, 1:8 SC/UPC PLC slplitter ", price: 310000 },
+	    { name: "DEAD END 16- 25MM Lengkap beserta Kupingan (untuk  kabel bulat 12core diameter 5-7mm) ", price: 16000 },
+	    { name: "DEAD END 25- 50MM Lengkap beserta Kupingan (untuk kabel bulat 24core&48core Dim 9-10mm) ", price: 17000 },
+	    { name: "DEAD END STRAIN Plastik Lengkap beserta Kupingan (u/ kabel fig8,dropcore, kabel gepeng dim 2-7mm) ", price: 9900 },
+	    { name: "SUSPENSION CORONG   untuk kabel bulat 1-288 core ALL SIZE diameter kabel 1-18mm ", price: 16000 },
+        ];
+
+        // ----- Logika Form (Tidak perlu diubah) -----
         const orderItemsContainer = document.getElementById('order-items-container');
         const totalPriceDisplay = document.getElementById('total-price');
         const formMessage = document.getElementById('form-message');
 
-        const productOptionsHTML = `
-            <option value="Pilih Produk" data-price="0">-- Pilih Jenis Kabel --</option>
-            <option value="ADSS 288 Core (24 Tube) 4KM" data-price="150000000">ADSS 288 Core (24 Tube) 4KM - Rp 150.000.000</option>
-            <option value="ADSS 144 Core (12 Tube) 4KM" data-price="75000000">ADSS 144 Core (12 Tube) 4KM - Rp 75.000.000</option>
-            <option value="ADSS 96 Core (8 Tube) 4KM" data-price="49900000">ADSS 96 Core (8 Tube) 4KM - Rp 49.900.000</option>
-            <option value="ADSS 48 Core (4 Tube) 4KM" data-price="29990000">ADSS 48 Core (4 Tube) 4KM - Rp 29.990.000</option>
-            <option value="ADSS 24 Core (4 Tube) 4KM" data-price="20999000">ADSS 24 Core (4 Tube) 4KM - Rp 20.999.000</option>
-            <option value="Mini ADSS 24 Core 4KM" data-price="15980000">Mini ADSS 24 Core 4KM - Rp 15.980.000</option>
-            <option value="Mini ADSS 24 Core 2KM" data-price="7900000">Mini ADSS 24 Core 2KM - Rp 7.900.000</option>
-            <option value="Mini ADSS 12 Core 4KM" data-price="11702500">Mini ADSS 12 Core 4KM - Rp 11.702.500</option>
-            <option value="Mini ADSS 12 Core 3KM" data-price="8827500">Mini ADSS 12 Core 3KM - Rp 8.827.500</option>
-            <option value="Mini ADSS 12 Core 2KM" data-price="5500000">Mini ADSS 12 Core 2KM - Rp 5.500.000</option>
-            <option value="Armoured GYXTW 12 Core 2KM" data-price="5990000">Armoured GYXTW 12 Core 2KM - Rp 5.990.000</option>
-            <option value="Armoured GYXTW 4 Core 2KM" data-price="2990000">Armoured GYXTW 4 Core 2KM - Rp 2.990.000</option>
-            <option value="Fig8 Armour 12 Core 2KM" data-price="5990000">Fig8 Armour 12 Core 2KM - Rp 5.990.000</option>
-            <option value="Jelly Tube 12 Core 4KM" data-price="7490000">Jelly Tube 12 Core 4KM - Rp 7.490.000</option>
-            <option value="Jelly Tube 12 Core 2KM" data-price="3745000">Jelly Tube 12 Core 2KM - Rp 3.745.000</option>
-            <option value="FTTH Drop 4 Core Premium 2KM" data-price="1926000">FTTH Drop 4 Core Premium 2KM - Rp 1.926.000</option>
-            <option value="FTTH Drop 2 Core Premium 2KM" data-price="1391000">FTTH Drop 2 Core Premium 2KM - Rp 1.391.000</option>
-            <option value="FTTH Drop 1 Core Premium 1KM" data-price="685000">FTTH Drop 1 Core Premium 1KM - Rp 685.000</option>
-            <option value="FTTH Drop 1 Core 1KM" data-price="561000">FTTH Drop 1 Core 1KM - Rp 561.000</option>
-        `;
+        function formatRupiah(number) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            }).format(number);
+        }
+        
+        // Generate product options from the products array
+        let productOptionsHTML = `<option value="Pilih Produk" data-price="0">-- Pilih Jenis Kabel --</option>`;
+        products.forEach(product => {
+            productOptionsHTML += `<option value="${product.name}" data-price="${product.price}">${product.name} - ${formatRupiah(product.price)}</option>`;
+        });
 
         // Generate 8 order item rows
         for (let i = 1; i <= 8; i++) {
@@ -122,14 +179,6 @@
             orderItemsContainer.appendChild(orderItem);
         }
         
-        function formatRupiah(number) {
-            return new Intl.NumberFormat('id-ID', {
-                style: 'currency',
-                currency: 'IDR',
-                minimumFractionDigits: 0
-            }).format(number);
-        }
-
         function calculateTotal() {
             let grandTotal = 0;
             document.querySelectorAll('.order-item').forEach(item => {
